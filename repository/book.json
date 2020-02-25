@@ -1,0 +1,56 @@
+{
+    "title": "Java知识点总结",
+    "description": "Java知识点总结",
+    "keywords": "Java",
+    "introduction": {
+        "path": "README.md",
+        "title": "Java知识点总结"
+    },
+    "pluginsConfig": {
+        "fontSettings": {
+        "theme": "white",
+        "family": "serif",
+        "size": 2
+        },
+        "ga": {
+            "token": "UA-39088953-8"
+        },
+        "duoshuo": {
+            "short_name": "wiznote",
+            "theme": "default"
+        }
+    },
+    "links": {
+        "home": false,
+        "about": false,
+        "issues": false,
+        "contribute": false,
+        "sidebar": {
+            "YUAN": "http://wangyuansxya.github.io/"
+        },
+        "tail": {
+            "Java知识点总结": "http://wangyuansxya.github.io/gitbook-java/"
+        },
+        "gitbook": false,
+        "sharing": {
+            "google" : true,
+            "facebook" : true,
+            "twitter" : true,
+            "weibo" : true,
+            "qq" : true,
+            "qrcode" : true
+        }
+    },
+    "pdf": {
+        "toc": true,
+        "pageNumbers": true,
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        }
+    }
+}
