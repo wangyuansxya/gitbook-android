@@ -1,0 +1,700 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ContentProvider介绍 · Java知识点总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BroadCastReceiver.md" />
+    
+    
+    <link rel="prev" href="Service.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://wangyuansxya.github.io/" target="_blank" class="custom-link">YUAN</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Android基础-四大组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Activity.html">
+            
+                <a href="Activity.html">
+            
+                    
+                    Activity介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="LaunchMode.html">
+            
+                <a href="LaunchMode.html">
+            
+                    
+                    Activity启动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Service.html">
+            
+                <a href="Service.html">
+            
+                    
+                    Service介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="ContentProvider.html">
+            
+                <a href="ContentProvider.html">
+            
+                    
+                    ContentProvider介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="BroadCastReceiver.md">
+            
+                <span>
+            
+                    
+                    BroadCastReceiver介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../layout/">
+            
+                <a href="../layout/">
+            
+                    
+                    Android布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../layout/Linearlayout.html">
+            
+                <a href="../layout/Linearlayout.html">
+            
+                    
+                    线性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../layout/Relativelayout.md">
+            
+                <span>
+            
+                    
+                    相对布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../layout/Framelayout.md">
+            
+                <span>
+            
+                    
+                    帧布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../layout/ConstraintLayout.html">
+            
+                <a href="../layout/ConstraintLayout.html">
+            
+                    
+                    约束布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../drawable/">
+            
+                <a href="../drawable/">
+            
+                    
+                    Android Drawable和bitmap
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../drawable/Drawable.html">
+            
+                <a href="../drawable/Drawable.html">
+            
+                    
+                    Drawable类详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../drawable/Paint_PorterDuffXfermode.html">
+            
+                <a href="../drawable/Paint_PorterDuffXfermode.html">
+            
+                    
+                    PorterDuffXfermode解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../animation/">
+            
+                <a href="../animation/">
+            
+                    
+                    动画详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../animation/LayoutTransition.html">
+            
+                <a href="../animation/LayoutTransition.html">
+            
+                    
+                    LayoutTransition类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    属性动画原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    View动画原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../view/">
+            
+                <a href="../view/">
+            
+                    
+                    Android View介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    View的绘制流程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../touch/">
+            
+                <a href="../touch/">
+            
+                    
+                    View的事件分发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../handler/">
+            
+                <a href="../handler/">
+            
+                    
+                    Handler详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Android 进程通信
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Activity启动流程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Application启动流程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../opt/">
+            
+                <a href="../opt/">
+            
+                    
+                    App性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../opt/perform_opt.html">
+            
+                <a href="../opt/perform_opt.html">
+            
+                    
+                    App性能优化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    开源框架源码
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    OkHttp
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    ButtferKnife
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux内核
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../linux/Linux.html">
+            
+                <a href="../linux/Linux.html">
+            
+                    
+                    Linux介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ContentProvider介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Service.html" class="navigation navigation-prev " aria-label="Previous page: Service介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="BroadCastReceiver.md" class="navigation navigation-next " aria-label="Next page: BroadCastReceiver介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ContentProvider介绍","level":"1.2.4","depth":2,"next":{"title":"BroadCastReceiver介绍","level":"1.2.5","depth":2,"path":"base/BroadCastReceiver.md","ref":"base/BroadCastReceiver.md","articles":[]},"previous":{"title":"Service介绍","level":"1.2.3","depth":2,"path":"base/Service.md","ref":"base/Service.md","articles":[]},"dir":"neutral"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"base/ContentProvider.md","mtime":"2020-02-25T08:46:00.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T06:01:59.545Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
